@@ -28,7 +28,7 @@ describe('GET /hello/:name', () => {
     expect(res.body).toEqual({ msg: 'Hello bad-user from express' })
   });
 
-  test('Should return welcome string 3', async () => {
+  test('Should return welcome string 3 - ЭТО заголовок ТРЕТЬЕГО теста', async () => {
     const res = await supertest(config.url)
         .get('/hello/bad-user')
         .set('Accept', 'application/json');
