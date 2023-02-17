@@ -28,11 +28,11 @@ describe('GET /hello/:name', () => {
     expect(res.body).toEqual({ msg: 'Hello bad-user from express' })
   });
 
-  test('Should return welcome string 3 - ТРЕТИЙ ТЕСТ!', async () => {
+  test('Should return welcome string 3 - ЭТО заголовок ТРЕТЬЕГО теста', async () => {
     const res = await supertest(config.url)
-        .get('/hello/anon')
+        .get('/hello/bad-user')
         .set('Accept', 'application/json');
 
-    expect(res.body).toEqual({ msg: 'Hello anon from express' })
+    expect(res.body).toEqual({ msg: 'Hello bad-user from express' })
   });
 });
